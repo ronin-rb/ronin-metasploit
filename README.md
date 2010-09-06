@@ -2,7 +2,8 @@
 
 * [github.com/ronin-ruby/ronin-metasploit](http://github.com/ronin-ruby/ronin-metasploit/)
 * [github.com/ronin-ruby/ronin-metasploit/issues](http://github.com/ronin-ruby/ronin-metasploit/issues)
-* Postmodern (postmodern.mod3 at gmail.com)
+* [groups.google.com/group/ronin-ruby](http://groups.google.com/group/ronin-ruby)
+* irc.freenode.net #ronin
 
 ## Description
 
