@@ -18,66 +18,19 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
-require 'ronin/config'
+require 'ronin/metasploit/config'
 
 require 'pullr'
 
 module Ronin
   module Metasploit
-    # The configuration directory used by Metasploit
-    CONFIG_DIR = File.join(Config::HOME,'.msf3')
-
-    # Directories that metasploit may be installed within
-    SEARCH_DIRS = [
-      File.join(Config::HOME,'metasploit3'),  # SVN checkout
-      File.join(Config::HOME,'msf3'),         # SVN checkout
-      '/pentest/svn/framework3',              # BackTrac Linux
-      '/opt/metasploit3/msf3',                # Linux
-    ]
-
-    # The directory within metasploit containing the framework code
-    LIB_DIR = 'lib'
-
-    # The directory within metasploit containing all modules
-    MODULES_DIR = 'modules'
-
-    #
-    # The directory where Metasploit was installed into.
-    #
-    # @return [String, nil]
-    #   The directory that Metasploit was installed into. Returns `nil`, if
-    #   none of the paths in `SEARCH_DIRS` are valid directories.
-    #
-    def Metasploit.root
-      unless defined?(@@ronin_metasploit_root)
-        @@ronin_metasploit_root = SEARCH_DIRS.find do |dir|
-          File.directory?(dir)
-        end
-      end
-
-      return @@ronin_metasploit_root
-    end
-
-    #
-    # Sets the directory that Metasploit is installed within.
-    #
-    # @param [String] new_dir
-    #   The new directory to use.
-    #
-    # @return [String]
-    #   The new Metasploit directory.
-    #
-    def Metasploit.root=(new_dir)
-      @@ronin_metasploit_root = File.expand_path(new_dir)
-    end
-
     #
     # Adds the Metasploit directory to the `$LOAD_PATH` constant.
     #
     # @return [Boolean]
     #
     def Metasploit.activate!
-      path = Metasploit.root
+      path = Config.root
 
       if path
         path = File.join(path,LIB_DIR)
@@ -95,7 +48,7 @@ module Ronin
     # @return [true]
     #
     def Metasploit.deactive!
-      path = Metasploit.root
+      path = Config.root
 
       if path
         $LOAD_PATH.reject! do |lib_dir|
@@ -114,10 +67,10 @@ module Ronin
     #   Specifies whether the update was successful.
     #
     def Metasploit.update!
-      return false unless Metasploit.root
+      return false unless Config.root
 
       begin
-        repo = Pullr::LocalRepository.new(:path => Metasploit.root)
+        repo = Pullr::LocalRepository.new(:path => Config.root)
 
         # temporarily remove Metasploit from the $LOAD_PATH
         Metasploit.deactive!

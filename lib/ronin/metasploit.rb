@@ -18,6 +18,7 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
+require 'ronin/metasploit/config'
 require 'ronin/metasploit/database'
 require 'ronin/metasploit/metasploit'
 require 'ronin/metasploit/version'

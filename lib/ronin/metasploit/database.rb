@@ -28,7 +28,7 @@ module Ronin
       # The default URI to the Metasploit Database
       DEFAULT_URI = Addressable::URI.new(
         :scheme => 'sqlite3',
-        :path => File.join(Metasploit::CONFIG_DIR,'sqlite3.db')
+        :path => File.join(Config::CONFIG_DIR,'sqlite3.db')
       )
 
       #
