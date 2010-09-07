@@ -38,7 +38,7 @@ module Ronin
 
       property :address, String
 
-      property :address6
+      property :address6, String
 
       property :port, Integer
 
