@@ -7,6 +7,14 @@ GIT
       extlib (~> 0.9.15)
 
 GIT
+  remote: http://github.com/postmodern/dm-is-read_only.git
+  revision: 7853f805ad5bfe86270e572c20fd83e8ebd84b26
+  specs:
+    dm-is-read_only (0.2.0)
+      activesupport (~> 3.0.0)
+      dm-core (~> 1.0.0)
+
+GIT
   remote: http://github.com/postmodern/dm-migrations.git
   revision: a352ef208927cb11640f2178e819fb971c4da759
   branch: runner
@@ -89,6 +97,10 @@ GEM
       uuidtools (~> 2.1.1)
     dm-validations (1.0.0)
       dm-core (~> 1.0.0)
+    dm-visualizer (0.1.0)
+      dm-core (>= 0.10.2)
+      ruby-graphviz (>= 0.9.10)
+      thor (>= 0.13.4)
     do_sqlite3 (0.10.2)
       data_objects (= 0.10.2)
     extlib (0.9.15)
@@ -114,19 +126,23 @@ GEM
     rspec-expectations (2.0.0.beta.20)
       diff-lcs (>= 1.1.2)
     rspec-mocks (2.0.0.beta.20)
+    ruby-graphviz (0.9.17)
     stringex (1.1.0)
     thor (0.14.0)
     tzinfo (0.3.23)
     uri-query_params (0.4.0)
     uuidtools (2.1.1)
     yard (0.6.0)
+    yard-dm (0.1.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   dm-core (~> 1.0.0)!
+  dm-is-read_only (~> 0.2.0)!
   dm-migrations (~> 1.0.0)!
+  dm-visualizer (~> 0.1.0)
   jeweler (~> 1.5.0.pre)
   pullr (~> 0.1.2)
   rake (~> 0.8.7)
@@ -134,4 +150,6 @@ DEPENDENCIES
   ronin (~> 0.4.0)!
   ronin-support (~> 0.1.0)!
   rspec (~> 2.0.0.beta.20)
+  ruby-graphviz (~> 0.9.10)
   yard (~> 0.6.0)
+  yard-dm (~> 0.1.1)
