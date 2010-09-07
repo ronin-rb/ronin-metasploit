@@ -15,7 +15,7 @@ Ronin Metasploit is a Ronin library which provides support for accessing
 * Auto-detects where Metasploit is commonly installed.
 * Allows loading Metasploit Modules.
 * Maps in the Metasploit Database using
-  [DataMapper](http://datamapper.github.com).
+  [DataMapper](http://datamapper.org).
 
 ## Synopsis
 
@@ -23,6 +23,8 @@ Ronin Metasploit is a Ronin library which provides support for accessing
 
 ## Requirements
 
+* [dm-core](http://datamapper.org) ~> 1.0.0
+* [dm-is-read_only](http://github.com/postmodern/dm-is-read_only) ~> 0.2.0
 * [pullr](http://github.com/postmodern/pullr) ~> 0.1.2
 * [ronin](http://ronin-ruby.github.com/) ~> 0.4.0
 
