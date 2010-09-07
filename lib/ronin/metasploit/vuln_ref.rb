@@ -18,6 +18,7 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
+require 'ronin/metasploit/ref'
 require 'ronin/metasploit/model'
 
 module Ronin
@@ -35,6 +36,8 @@ module Ronin
       property :ref_id, Integer, :key => true
 
       property :vuln_id, Integer, :key => true
+
+      belongs_to :ref
 
     end
   end
