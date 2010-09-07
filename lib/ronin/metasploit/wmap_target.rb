@@ -22,6 +22,9 @@ require 'ronin/metasploit/model'
 
 module Ronin
   module Metasploit
+    #
+    # Maps in the `wmap_targets` table used by `Msf::DBManager::WmapTarget`.
+    #
     class WMapTarget
 
       include Model
