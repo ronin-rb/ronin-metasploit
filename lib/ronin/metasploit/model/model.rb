@@ -1,7 +1,8 @@
 #
-# Ronin Metasploit - A Ronin library for accessing The Metasploit Framework.
+# Ronin Exploits - A Ruby library for Ronin that provides exploitation and
+# payload crafting functionality.
 #
-# Copyright (c) 2010 Hal Brodigan (postmodern.mod3 at gmail.com)
+# Copyright (c) 2007-2010 Hal Brodigan (postmodern.mod3 at gmail.com)
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -18,39 +19,27 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
-require 'ronin/metasploit/workspace'
-require 'ronin/metasploit/host'
-require 'ronin/metasploit/model'
+require 'ronin/metasploit/model/types'
+
+require 'dm-core'
+require 'dm-is-read_only'
 
 module Ronin
   module Metasploit
-    #
-    # Maps in the `events` table used by `Msf::DBManager::Event`.
-    #
-    class Event
+    module Model
+      include Model::Types
 
-      include Model
+      def self.included(base)
+        base.send :include, DataMapper::Resource, Model::Types
 
-      storage_names[:metasploit] = 'events'
+        base.is :read_only
 
-      property :id, Serial
-
-      property :name, String
-
-      property :critical, Boolean
-
-      property :seen, Boolean
-
-      property :username, String
-
-      property :info, SerializedRuby
-
-      property :created_at, DateTime
-
-      belongs_to :host
-
-      belongs_to :workspace
-
+        base.module_eval do
+          def self.default_repository_name
+            :metasploit
+          end
+        end
+      end
     end
   end
 end

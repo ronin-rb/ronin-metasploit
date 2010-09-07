@@ -40,7 +40,7 @@ module Ronin
 
       property :path, Text
 
-      property :options, Text
+      property :options, SerializedRuby
 
       property :created_at, DateTime
 

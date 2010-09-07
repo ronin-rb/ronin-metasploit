@@ -42,7 +42,7 @@ module Ronin
 
       property :seen, Boolean
 
-      property :data, Text
+      property :data, SerializedRuby
 
       belongs_to :workspace
 

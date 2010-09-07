@@ -41,7 +41,7 @@ module Ronin
 
       property :name, String
 
-      property :info, Text
+      property :info, SerializedRuby
 
       property :created_at, DateTime
 

@@ -40,7 +40,7 @@ module Ronin
 
       property :path, Text
 
-      property :data, Text
+      property :data, SerializedRuby
 
       property :content_type, String
 
