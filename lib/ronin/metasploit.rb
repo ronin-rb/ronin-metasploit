@@ -19,6 +19,5 @@
 #
 
 require 'ronin/metasploit/database'
-require 'ronin/metasploit/sandbox'
 require 'ronin/metasploit/metasploit'
 require 'ronin/metasploit/version'
