@@ -27,12 +27,6 @@ module Ronin
     # The configuration directory used by Metasploit
     CONFIG_DIR = File.join(Config::HOME,'.msf3')
 
-    # The default URI to the Metasploit Database
-    DEFAULT_DATABASE_URI = Addressable::URI.new(
-      :scheme => 'sqlite3',
-      :path => File.join(CONFIG_DIR,'sqlite3.db')
-    )
-
     # Directories that metasploit may be installed within
     SEARCH_DIRS = [
       File.join(Config::HOME,'metasploit3'),  # SVN checkout
@@ -137,20 +131,6 @@ module Ronin
         return false
       end
 
-      return true
-    end
-
-    #
-    # Maps in the Metasploit Database using DataMapper.
-    #
-    # @param [String, Addressable::URI] uri
-    #   Optional URI to the Metasploit Database.
-    #
-    # @return [true]
-    #   Specifies the database was successfully mapped in.
-    #
-    def Metasploit.database!(uri=DEFAULT_DATABASE_URI)
-      DataMapper.setup(:metasploit,uri)
       return true
     end
 

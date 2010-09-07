@@ -18,7 +18,32 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
-require 'ronin/metasploit/database'
-require 'ronin/metasploit/sandbox'
 require 'ronin/metasploit/metasploit'
-require 'ronin/metasploit/version'
+
+require 'dm-core'
+
+module Ronin
+  module Metasploit
+    module Database
+      # The default URI to the Metasploit Database
+      DEFAULT_URI = Addressable::URI.new(
+        :scheme => 'sqlite3',
+        :path => File.join(Metasploit::CONFIG_DIR,'sqlite3.db')
+      )
+
+      #
+      # Maps in the Metasploit Database using DataMapper.
+      #
+      # @param [String, Addressable::URI] uri
+      #   Optional URI to the Metasploit Database.
+      #
+      # @return [true]
+      #   Specifies the database was successfully mapped in.
+      #
+      def Database.setup(uri=DEFAULT_URI)
+        DataMapper.setup(:metasploit,uri)
+        return true
+      end
+    end
+  end
+end
