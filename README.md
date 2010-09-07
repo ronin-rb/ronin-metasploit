@@ -12,6 +12,11 @@ Ronin Metasploit is a Ronin library which provides support for accessing
 
 ## Features
 
+* Auto-detects where Metasploit is commonly installed.
+* Allows loading Metasploit Modules.
+* Maps in the Metasploit Database using
+  [DataMapper](http://datamapper.github.com).
+
 ## Synopsis
 
 ## Examples
