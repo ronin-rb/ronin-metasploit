@@ -22,3 +22,7 @@ require 'ronin/metasploit/config'
 require 'ronin/metasploit/database'
 require 'ronin/metasploit/metasploit'
 require 'ronin/metasploit/version'
+
+module Ronin
+  Config.load :metasploit
+end
