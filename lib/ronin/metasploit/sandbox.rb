@@ -45,8 +45,6 @@ module Ronin
       #   Returns the loaded module, or `nil` if the module could not be
       #   loaded.
       #
-      # @since 0.4.0
-      #
       def Sandbox.load(path)
         return nil unless Metasploit.root
 

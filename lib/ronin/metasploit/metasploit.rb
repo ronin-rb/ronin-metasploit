@@ -55,8 +55,6 @@ module Ronin
     #   The directory that Metasploit was installed into. Returns `nil`, if
     #   none of the paths in `SEARCH_DIRS` are valid directories.
     #
-    # @since 0.4.0
-    #
     def Metasploit.root
       unless defined?(@@ronin_metasploit_root)
         @@ronin_metasploit_root = SEARCH_DIRS.find do |dir|
@@ -76,8 +74,6 @@ module Ronin
     # @return [String]
     #   The new Metasploit directory.
     #
-    # @since 0.4.0
-    #
     def Metasploit.root=(new_dir)
       @@ronin_metasploit_root = File.expand_path(new_dir)
     end
@@ -86,8 +82,6 @@ module Ronin
     # Adds the Metasploit directory to the `$LOAD_PATH` constant.
     #
     # @return [Boolean]
-    #
-    # @since 0.4.0
     #
     def Metasploit.activate!
       path = Metasploit.root
@@ -107,8 +101,6 @@ module Ronin
     #
     # @return [true]
     #
-    # @since 0.4.0
-    #
     def Metasploit.deactive!
       path = Metasploit.root
 
@@ -127,8 +119,6 @@ module Ronin
     #
     # @return [Boolean]
     #   Specifies whether the update was successful.
-    #
-    # @since 0.4.0
     #
     def Metasploit.update!
       return false unless Metasploit.root
