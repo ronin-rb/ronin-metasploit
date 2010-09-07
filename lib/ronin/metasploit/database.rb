@@ -18,7 +18,20 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
-require 'ronin/metasploit/metasploit'
+require 'ronin/metasploit/config'
+require 'ronin/metasploit/client'
+require 'ronin/metasploit/event'
+require 'ronin/metasploit/host'
+require 'ronin/metasploit/loot'
+require 'ronin/metasploit/note'
+require 'ronin/metasploit/ref'
+require 'ronin/metasploit/report'
+require 'ronin/metasploit/schema_migration'
+require 'ronin/metasploit/service'
+require 'ronin/metasploit/vuln_ref'
+require 'ronin/metasploit/wmap_request'
+require 'ronin/metasploit/wmap_target'
+require 'ronin/metasploit/workspace'
 
 require 'dm-core'
 
