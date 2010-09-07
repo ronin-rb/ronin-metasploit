@@ -67,6 +67,16 @@ module Ronin
 
       belongs_to :workspace
 
+      has n, :services
+
+      has n, :clients
+
+      has n, :events
+
+      has n, :loots
+
+      has n, :notes
+
     end
   end
 end

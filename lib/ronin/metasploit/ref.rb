@@ -39,6 +39,8 @@ module Ronin
 
       property :updated_at, DateTime
 
+      has n, :refs
+
       belongs_to :ref, :required => false
 
     end

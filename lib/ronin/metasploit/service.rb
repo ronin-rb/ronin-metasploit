@@ -49,6 +49,10 @@ module Ronin
 
       belongs_to :host
 
+      has n, :loots
+
+      has n, :notes
+
     end
   end
 end

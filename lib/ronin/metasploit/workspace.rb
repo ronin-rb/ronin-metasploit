@@ -40,6 +40,14 @@ module Ronin
 
       property :description, Text
 
+      has n, :hosts
+
+      has n, :events
+
+      has n, :loots
+
+      has n, :notes
+
     end
   end
 end
