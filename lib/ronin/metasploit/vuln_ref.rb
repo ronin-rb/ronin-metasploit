@@ -22,11 +22,15 @@ require 'ronin/metasploit/model'
 
 module Ronin
   module Metasploit
+    #
+    # Maps in the `vulns_refs` table created by
+    # `msf3/data/sql/migrate/000_create_tables.rb`.
+    #
     class VulnRef
 
       include Model
 
-      storage_names[:metasploit] = 'vuln_refs'
+      storage_names[:metasploit] = 'vulns_refs'
 
       property :ref_id, Integer, :key => true
 
