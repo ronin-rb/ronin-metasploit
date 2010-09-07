@@ -35,11 +35,11 @@ module Ronin
 
       property :id, Serial
 
-      property :ua_string, Text, :length => 1024, :required => true
+      property :ua_string, Text
 
-      property :ua_name, String, :length => 64
+      property :ua_name, String
 
-      property :us_ver, String, :length => 32
+      property :us_ver, String
 
       property :created_at, DateTime
 

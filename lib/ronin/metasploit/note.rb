@@ -36,7 +36,7 @@ module Ronin
 
       property :id, Serial
 
-      property :ntype, String, :length => 512
+      property :ntype, String
 
       property :critical, Boolean
 

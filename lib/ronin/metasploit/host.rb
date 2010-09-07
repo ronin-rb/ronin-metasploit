@@ -33,7 +33,7 @@ module Ronin
 
       property :id, Serial
 
-      property :address, String, :length => 16
+      property :address, String
 
       property :address6, String
 

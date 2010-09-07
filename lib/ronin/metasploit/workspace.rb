@@ -30,15 +30,15 @@ module Ronin
 
       property :id, Serial
 
-      property :name, String, :length => 255
+      property :name, String
 
       property :created_at, DateTime
 
       property :updated_at, DateTime
 
-      property :boundary, Text, :length => 4096
+      property :boundary, Text
 
-      property :description, Text, :length => 4096
+      property :description, Text
 
     end
   end

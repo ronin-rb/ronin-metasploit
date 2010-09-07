@@ -33,7 +33,7 @@ module Ronin
 
       property :id, Serial
 
-      property :name, String, :length => 512
+      property :name, String
 
       property :created_at, DateTime
 

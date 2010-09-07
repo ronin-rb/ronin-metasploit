@@ -36,7 +36,7 @@ module Ronin
 
       property :host, String
 
-      property :address, :length => 16
+      property :address, String
 
       property :address6
 
@@ -44,7 +44,7 @@ module Ronin
 
       property :ssl, Integer
 
-      property :meth, String, :length => 32
+      property :meth, String
 
       property :path, Text
 
@@ -54,7 +54,7 @@ module Ronin
 
       property :body, Text
 
-      property :respcode, String, :limit => 16
+      property :respcode, String
 
       property :resphead, Text
 

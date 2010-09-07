@@ -36,9 +36,9 @@ module Ronin
 
       property :id, Serial
 
-      property :ltype, String, :length => 512
+      property :ltype, String
 
-      property :path, Text, :length => 1024
+      property :path, Text
 
       property :data, Text
 

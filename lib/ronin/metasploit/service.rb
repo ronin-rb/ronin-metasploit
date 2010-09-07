@@ -33,9 +33,9 @@ module Ronin
 
       property :id, Serial
 
-      property :port, Integer, :required => true
+      property :port, Integer
 
-      property :proto, String, :length => 16
+      property :proto, String
 
       property :state, String
 
