@@ -57,6 +57,18 @@ module Ronin
         DataMapper.setup(:metasploit,uri)
         return true
       end
+
+      #
+      # The current schema version of the Metasploit Database.
+      #
+      # @return [String]
+      #   The schema version.
+      #
+      def Database.schema_version
+        if (migration = SchemaMigration.last(:order => [:version.asc]))
+          migration.version
+        end
+      end
     end
   end
 end
