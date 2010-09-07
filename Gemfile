@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
 DATA_MAPPER = 'http://github.com/datamapper'
+DM_VERSION = '~> 1.0.1'
 RONIN = 'http://github.com/ronin-ruby'
 
 # DataMapper dependencies
-gem 'dm-core',		'~> 1.0.0', :git => "#{DATA_MAPPER}/dm-core.git"
-gem 'dm-migrations',	'~> 1.0.0', :git => 'http://github.com/postmodern/dm-migrations.git', :branch => 'runner'
+gem 'dm-migrations',	DM_VERSION, :git => 'http://github.com/postmodern/dm-migrations.git', :branch => 'runner'
 
 # DataMapper plugins
 gem 'dm-is-read_only',	'~> 0.2.0', :git => 'http://github.com/postmodern/dm-is-read_only.git'
