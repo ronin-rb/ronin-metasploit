@@ -37,7 +37,7 @@ module Ronin
 
       property :service_id, Integer, :key => true
       
-      property :created, DateTime
+      property :created_at, DateTime
       
       property :name, String
 
