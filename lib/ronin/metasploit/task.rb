@@ -18,31 +18,50 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
+require 'ronin/metasploit/workspace'
 require 'ronin/metasploit/model'
 
 module Ronin
   module Metasploit
     #
-    # Maps in the `vulns` table created by
-    # `msf3/data/sql/migrate/000_create_tables.rb`.
+    # Maps in the `tasks` table created by
+    # `msf3/data/sql/migrate/012_add_tasks.rb`.
     #
     class Vuln
 
       include Model
 
-      storage_names[:metasploit] = 'vulns'
+      storage_names[:metasploit] = 'tasks'
 
-      property :host_id, Integer, :key => true
-
-      property :service_id, Integer, :key => true
+      property :id, Serial
       
+      property :workspace_id, Integer, :key => true
+      
+      property :created_by, String
+      
+      property :module, String
+      
+      property :completed_at, DateTime
+      
+      property :path, Text
+      
+      property :info, Text
+      
+      property :description, Text
+      
+      property :progress, Integer
+      
+      property :options, SerializedRuby
+      
+      property :error, Text
+
       property :created_at, DateTime
       
-      property :name, String
+      property :updated_at, DateTime
 
-      property :data, Text
-
-      belongs_to :ref
+      property :result, SerializedRuby
+      
+      belongs_to :workspace
 
     end
   end
