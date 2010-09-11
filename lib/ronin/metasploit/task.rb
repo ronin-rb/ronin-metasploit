@@ -35,8 +35,6 @@ module Ronin
 
       property :id, Serial
       
-      property :workspace_id, Integer, :key => true
-      
       property :created_by, String
       
       property :module, String

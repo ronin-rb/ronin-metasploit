@@ -34,8 +34,6 @@ module Ronin
 
       property :id, Serial
 
-      property :service_id, Integer, :key => true
-      
       property :created_at, DateTime
       
       property :updated_at, DateTime
@@ -50,9 +48,11 @@ module Ronin
       
       property :ptype, String
       
-      property :source_id, Integer, :key => true
-      
       property :source_type, String
+
+      belongs_to :service
+
+      belongs_to :source
 
     end
   end

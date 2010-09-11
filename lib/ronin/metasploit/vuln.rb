@@ -33,15 +33,15 @@ module Ronin
 
       storage_names[:metasploit] = 'vulns'
 
-      property :host_id, Integer, :key => true
-
-      property :service_id, Integer, :key => true
-      
       property :created_at, DateTime
       
       property :name, String
 
       property :data, Text
+
+      belongs_to :host
+
+      belongs_to :service
 
       belongs_to :ref
 

@@ -40,6 +40,10 @@ module Ronin
 
       property :description, Text
 
+      has n, :project_members
+
+      has n, :users, :through => :project_members
+
       has n, :hosts
 
       has n, :events
@@ -47,6 +51,8 @@ module Ronin
       has n, :loots
 
       has n, :notes
+
+      has n, :tasks
 
     end
   end

@@ -58,6 +58,10 @@ module Ronin
       
       property :admin, Boolean
 
+      has n, :project_members
+
+      has n, :workspaces, :through => :project_members
+
     end
   end
 end

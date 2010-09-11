@@ -77,6 +77,10 @@ module Ronin
 
       has n, :notes
 
+      has n, :vulns
+
+      has n, :exploited_hosts
+
     end
   end
 end
