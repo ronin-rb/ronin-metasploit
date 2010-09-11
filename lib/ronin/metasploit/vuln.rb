@@ -18,6 +18,7 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
+require 'ronin/metasploit/service'
 require 'ronin/metasploit/ref'
 require 'ronin/metasploit/model'
 
@@ -27,7 +28,7 @@ module Ronin
     # Maps in the `vulns` table created by
     # `msf3/data/sql/migrate/000_create_tables.rb`.
     #
-    class Task
+    class Vuln
 
       include Model
 
@@ -42,6 +43,8 @@ module Ronin
       property :name, String
 
       property :data, Text
+
+      belongs_to :service
 
       belongs_to :ref
 
