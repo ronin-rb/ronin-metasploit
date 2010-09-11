@@ -20,6 +20,7 @@
 
 require 'ronin/metasploit/config'
 require 'ronin/metasploit/client'
+require 'ronin/metasploit/credential'
 require 'ronin/metasploit/event'
 require 'ronin/metasploit/host'
 require 'ronin/metasploit/loot'
