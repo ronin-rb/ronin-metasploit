@@ -18,46 +18,31 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
-require 'ronin/metasploit/workspace'
-require 'ronin/metasploit/host'
-require 'ronin/metasploit/service'
 require 'ronin/metasploit/model'
 
 module Ronin
   module Metasploit
     #
-    # Maps in the `users` table created by
-    # `msf3/data/sql/migrate/20100824151500_add_exploited_table.rb`.
+    # Maps in the `vulns` table created by
+    # `msf3/data/sql/migrate/000_create_tables.rb`.
     #
-    class ExploitedHost
+    class Vuln
 
       include Model
 
-      storage_names[:metasploit] = 'exploited_hosts'
-      
-      property :id, Serial
-      
-      property :username, String
-      
+      storage_names[:metasploit] = 'vulns'
+
       property :host_id, Integer, :key => true
-      
+
       property :service_id, Integer, :key => true
-      
-      property :session_uuid, Integer
-      
-      property :name, Text
-      
-      property :payload, Text
       
       property :created_at, DateTime
       
-      property :updated_at, DateTime
+      property :name, String
 
-    	belongs_to :host
-    	
-    	belongs_to :service
-    	
-    	belongs_to :workspace
+      property :data, Text
+
+      belongs_to :ref
 
     end
   end
