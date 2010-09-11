@@ -27,7 +27,7 @@ module Ronin
     # Maps in the `vulns` table created by
     # `msf3/data/sql/migrate/000_create_tables.rb`.
     #
-    class Vuln
+    class Task
 
       include Model
 
