@@ -32,6 +32,8 @@ module Ronin
 
       storage_names[:metasploit] = 'schema_migrations'
 
+      default_scope.update(:order => nil)
+
       property :version, String, :key => true
 
     end

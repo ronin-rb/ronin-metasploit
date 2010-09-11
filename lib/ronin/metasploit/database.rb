@@ -71,7 +71,7 @@ module Ronin
       #   The schema version.
       #
       def Database.schema_version
-        if (migration = SchemaMigration.last(:order => [])
+        if (migration = SchemaMigration.last)
           migration.version
         end
       end
