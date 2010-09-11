@@ -32,7 +32,7 @@ module Ronin
 
       storage_names[:metasploit] = 'schema_migrations'
 
-      property :version, String
+      property :version, String, :key => true
 
     end
   end
