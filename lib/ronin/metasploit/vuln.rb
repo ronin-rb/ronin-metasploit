@@ -32,12 +32,14 @@ module Ronin
       include Model
 
       storage_names[:metasploit] = 'vulns'
+     
+      property :id, Serial
 
-      property :created_at, DateTime
-      
       property :name, String
 
       property :data, Text
+
+      property :created_at, DateTime
 
       belongs_to :host
 
