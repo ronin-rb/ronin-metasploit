@@ -19,7 +19,7 @@ Jeweler::Tasks.new do |gem|
   gem.licenses = ['GPL-2']
   gem.summary = %Q{A Ronin library which provides support for accessing The Metasploit Framework.}
   gem.description = %Q{Ronin Metasploit is a Ronin library which provides support for accessing The Metasploit Framework.}
-  gem.email = 'postmodern.mod3@gmail.com'
+  gem.email = 'ronin-ruby@googlegroups.com'
   gem.homepage = 'http://github.com/ronin-ruby/ronin-metasploit'
   gem.authors = ['Postmodern']
   gem.has_rdoc = 'yard'

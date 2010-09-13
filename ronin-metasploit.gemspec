@@ -9,10 +9,10 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Postmodern"]
-  s.date = %q{2010-09-07}
+  s.date = %q{2010-09-13}
   s.default_executable = %q{ronin-metasploit}
   s.description = %q{Ronin Metasploit is a Ronin library which provides support for accessing The Metasploit Framework.}
-  s.email = %q{postmodern.mod3@gmail.com}
+  s.email = %q{ronin-ruby@googlegroups.com}
   s.executables = ["ronin-metasploit"]
   s.extra_rdoc_files = [
     "ChangeLog.md",
@@ -32,8 +32,10 @@ Gem::Specification.new do |s|
     "lib/ronin/metasploit.rb",
     "lib/ronin/metasploit/client.rb",
     "lib/ronin/metasploit/config.rb",
+    "lib/ronin/metasploit/credential.rb",
     "lib/ronin/metasploit/database.rb",
     "lib/ronin/metasploit/event.rb",
+    "lib/ronin/metasploit/exploited_host.rb",
     "lib/ronin/metasploit/host.rb",
     "lib/ronin/metasploit/loot.rb",
     "lib/ronin/metasploit/metasploit.rb",
@@ -42,12 +44,16 @@ Gem::Specification.new do |s|
     "lib/ronin/metasploit/model/types.rb",
     "lib/ronin/metasploit/model/types/serialized_ruby.rb",
     "lib/ronin/metasploit/note.rb",
+    "lib/ronin/metasploit/project_member.rb",
     "lib/ronin/metasploit/ref.rb",
     "lib/ronin/metasploit/report.rb",
     "lib/ronin/metasploit/sandbox.rb",
     "lib/ronin/metasploit/schema_migration.rb",
     "lib/ronin/metasploit/service.rb",
+    "lib/ronin/metasploit/task.rb",
+    "lib/ronin/metasploit/user.rb",
     "lib/ronin/metasploit/version.rb",
+    "lib/ronin/metasploit/vuln.rb",
     "lib/ronin/metasploit/vuln_ref.rb",
     "lib/ronin/metasploit/wmap_request.rb",
     "lib/ronin/metasploit/wmap_target.rb",
