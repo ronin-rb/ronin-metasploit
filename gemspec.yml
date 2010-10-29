@@ -17,6 +17,9 @@ dependencies:
   thor: ~> 0.14.3
   # DataMapper dependencies:
   # dm-is-read_only: ~> 0.2.0
+  # Ronin dependencies:
+  # ronin-support: ~> 0.1.0
+  # ronin: ~> 0.4.0
 
 development_dependencies:
   bundler: ~> 1.0.0
