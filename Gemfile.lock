@@ -1,9 +1,8 @@
 GIT
   remote: http://github.com/postmodern/dm-is-read_only.git
-  revision: b7a33f0d92511046552cc0486544f2da6b09857d
+  revision: b1b3cd75a770ac647321aa213e33b978a950f569
   specs:
     dm-is-read_only (0.2.0)
-      activesupport (~> 3.0.0)
       dm-core (~> 1.0.0)
 
 GIT
