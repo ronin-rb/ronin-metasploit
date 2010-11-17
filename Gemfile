@@ -14,7 +14,7 @@ gem 'dm-is-read_only',	'~> 0.2.0', :git => 'http://github.com/postmodern/dm-is-r
 
 # Ronin dependencies
 gem 'ronin-support',	'~> 0.1.0', :git => "#{RONIN}/ronin-support.git"
-gem 'ronin',		'~> 0.4.0', :git => "#{RONIN}/ronin.git"
+gem 'ronin',		'~> 1.0.0', :git => "#{RONIN}/ronin.git"
 
 group(:development) do
   gem 'rake',		'~> 0.8.7'
