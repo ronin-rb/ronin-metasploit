@@ -1,8 +1,9 @@
 # Ronin Metasploit
 
-* [github.com/ronin-ruby/ronin-metasploit](http://github.com/ronin-ruby/ronin-metasploit/)
-* [github.com/ronin-ruby/ronin-metasploit/issues](http://github.com/ronin-ruby/ronin-metasploit/issues)
-* [groups.google.com/group/ronin-ruby](http://groups.google.com/group/ronin-ruby)
+* [Source](http://github.com/ronin-ruby/ronin-metasploit/)
+* [Issues](http://github.com/ronin-ruby/ronin-metasploit/issues)
+* [Documentation](http://rubydoc.info/github/ronin-ruby/ronin-metasploit/frames)
+* [Mailing List](http://groups.google.com/group/ronin-ruby)
 * irc.freenode.net #ronin
 
 ## Description
