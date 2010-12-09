@@ -10,9 +10,6 @@ gemspec
 gem 'dm-migrations',	DM_VERSION, :git => 'http://github.com/postmodern/dm-migrations.git',
                                   :branch => 'runner'
 
-# DataMapper plugins
-gem 'dm-is-read_only',	'~> 0.2.0', :git => 'http://github.com/postmodern/dm-is-read_only.git'
-
 # Ronin dependencies
 gem 'ronin-support',	'~> 0.1.0', :git => "#{RONIN}/ronin-support.git"
 gem 'ronin',          '~> 1.0.0', :git => "#{RONIN}/ronin.git"
