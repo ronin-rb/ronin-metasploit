@@ -18,8 +18,8 @@ dependencies:
   # DataMapper dependencies:
   dm-is-read_only: ~> 0.2.0
   # Ronin dependencies:
-  ronin-support: ~> 0.1.0.rc1
-  ronin: ~> 1.0.0.rc1
+  ronin-support: ~> 0.1.0
+  ronin: ~> 1.0.0
 
 development_dependencies:
   bundler: ~> 1.0.0
