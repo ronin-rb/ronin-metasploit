@@ -27,7 +27,8 @@ Ronin Metasploit is a Ronin library which provides support for accessing
 * [dm-core](http://datamapper.org) ~> 1.0.0
 * [dm-is-read_only](http://github.com/postmodern/dm-is-read_only) ~> 0.2.0
 * [pullr](http://github.com/postmodern/pullr) ~> 0.1.2
-* [ronin](http://ronin-ruby.github.com/) ~> 1.0.0
+* [ronin](http://ronin-ruby.github.com/) ~> 0.2
+* [ronin](http://ronin-ruby.github.com/) ~> 1.1
 
 ## Install
 
