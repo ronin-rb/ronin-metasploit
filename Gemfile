@@ -10,7 +10,7 @@ gemspec
 # gem 'ronin-support',	'~> 0.1.0', :git => "#{RONIN_URI}/ronin-support.git"
 # gem 'ronin',          '~> 1.0.0', :git => "#{RONIN_URI}/ronin.git"
 
-group(:development) do
+group :development do
   gem 'rake',	        '~> 0.8.7'
 
   gem 'ore-tasks',    '~> 0.4'
