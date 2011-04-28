@@ -17,9 +17,9 @@ group :development do
   gem 'rspec',        '~> 2.4'
 
   gem 'kramdown',       '~> 0.12'
+  gem 'yard-dm',        '~> 0.1.1'
   gem 'ruby-graphviz',	'~> 0.9.10'
   gem 'dm-visualizer',	'~> 0.2.1'
-  gem 'yard-dm',        '~> 0.1.1'
 end
 
 #
