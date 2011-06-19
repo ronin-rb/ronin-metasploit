@@ -8,7 +8,7 @@ gemspec
 
 # Ronin dependencies
 # gem 'ronin-support',	'~> 0.2', :git => "#{RONIN_URI}/ronin-support.git"
-gem 'ronin',          '~> 1.1', :git => "#{RONIN_URI}/ronin.git"
+# gem 'ronin',          '~> 1.1', :git => "#{RONIN_URI}/ronin.git"
 
 group :development do
   gem 'rake',	        '~> 0.8'
